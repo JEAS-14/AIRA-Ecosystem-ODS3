@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+aira-web/
+├── public/                  <-- Assets estáticos (index.html, logos)
+├── src/
+│   ├── assets/              <-- Imágenes, fuentes y archivos globales de CSS
+│   ├── core/                <-- El Corazón (Independiente de la UI)
+│   │   ├── domain/          <-- Entidades (User, Mood) y Modelos
+│   │   ├── use-cases/       <-- Lógica pura (ej: LoginUser.js, FormatChartData.js)
+│   │   └── protocols/       <-- Interfaces para los servicios (API, Sockets)
+│   ├── infrastructure/      <-- Conexiones Externas
+│   │   ├── api/             <-- Adaptadores Axios/Fetch para el Backend
+│   │   ├── sockets/         <-- Adaptadores Socket.io para tiempo real
+│   │   └── storage/         <-- Manejo de LocalStorage o Cookies
+│   ├── presentation/        <-- Lo que el usuario ve (UI)
+│   │   ├── components/      <-- Componentes reutilizables (Botones, Navbar, Cards)
+│   │   ├── hooks/           <-- Lógica compartida de React (useAuth, useMood)
+│   │   ├── layout/          <-- Estructuras base (DashboardLayout, AuthLayout)
+│   │   └── views/           <-- Páginas principales (Login, Dashboard, Perfil)
+│   ├── shared/              <-- Utilidades y constantes globales
+│   ├── App.js               <-- Router y Configuración Global
+│   └── index.js             <-- Punto de entrada
+├── .env                     <-- Variables (URL del Backend: localhost:4000)
+├── package.json             <-- Dependencias (React, Tailwind, Axios)
+└── tailwind.config.js       <-- Configuración de estilos

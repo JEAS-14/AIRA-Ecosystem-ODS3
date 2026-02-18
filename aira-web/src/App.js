@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import DashboardLayout from './presentation/layout/DashboardLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DashboardLayout>
+      {/* Aquí irá el contenido de cada página */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-4 text-indigo-900">Bienvenido a AIRA</h2>
+        <p className="text-gray-600">Aquí verás las métricas de bienestar de tus pacientes en tiempo real.</p>
+      </div>
+    </DashboardLayout>
   );
 }
 
