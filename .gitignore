@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Producción
+build/
+dist/
+
+# Varios
+.DS_Store
+.env
+.env.local
+.vscode/
+
+# React Native específico
+android/
+ios/
+*.log
